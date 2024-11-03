@@ -1,14 +1,4 @@
 
-
-body {
-    font-family: 'Courier New', Courier, monospace; /* Fuente retro */
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f5; /* Color de fondo suave */
-    color: #333;
-}
-
-/* Estilo del puntero del mouse */
 body {
     cursor: url('ruta/a/tu/puntero-retro.cur'), auto; /* Cambia 'ruta/a/tu/puntero-retro.cur' por la ruta de tu cursor */
 }
