@@ -18,7 +18,7 @@ body {
 header {
     text-align: center;
     padding: 2rem 0;
-    background-color: #333; /* Fondo oscuro para el encabezado */
+    background-color: #282c34; /* Fondo oscuro para el encabezado */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
 }
 
@@ -41,28 +41,13 @@ header {
     box-shadow: 0 8px 20px rgba(97, 218, 251, 0.5); /* Sombra al pasar el mouse */
 }
 
-header h1 {
-    margin-top: 1rem;
-    font-size: 3rem; /* Tamaño de fuente más grande */
-    color: #61dafb; /* Color llamativo */
-    font-family: 'Roboto', sans-serif; /* Fuente profesional */
-    position: relative; /* Para posicionar el pseudo-elemento */
-    overflow: hidden; /* Para ocultar cualquier desbordamiento */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */
-    text-shadow: 
-        1px 1px 0 rgba(0, 0, 0, 0.5), /* Sombra suave para contorno */
-        -1px -1px 0 rgba(0, 0, 0, 0.5), 
-        1px -1px 0 rgba(0, 0, 0, 0.5), 
-        -1px 1px 0 rgba(0, 0, 0, 0.5); 
+h1 {
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y tamaño */
 }
 
-header h1:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    color: #21a1f1; /* Cambia a un color diferente al pasar el mouse */
-}
-
-header h1:hover::before {
-    opacity: 1; /* Muestra el resplandor al pasar el mouse */
+header:hover h1 {
+    color: #61dafb; /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el mouse */
 }
 /* Navbar */
 .navbar {

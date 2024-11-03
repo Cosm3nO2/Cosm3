@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo claro para el contenido */
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #282c34; /* Fondo oscuro para el encabezado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #61dafb; /* Borde color retro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(97, 218, 251, 0.5); /* Sombra al pasar el mouse */
+}
+
+h1 {
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios de color y tamaño */
+}
+
+header:hover h1 {
+    color: rgba(97, 218, 251, 0.8); /* Cambia a un color más opaco al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el mouse */
+}
+
+main {
+    padding: 2rem;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los servicios se ajusten en diferentes pantallas */
+}
+
+.service {
+    background-color: white; /* Fondo blanco para cada servicio */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 1rem;
+    margin: 1rem;
+    flex-basis: calc(30% - 2rem); /* Ancho flexible con margen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para las animaciones */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del cuadrante al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse */
+}
+
+.service-image {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.service h2 {
+    color: #282c34; /* Color oscuro para los títulos de los servicios */
+}
+
+footer { 
+    background-color: #333; 
+    color: #fff; 
+    padding: 2rem 0; 
+    text-align: center; 
+ } 
+ 
+ .footer-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+ } 
+ 
+ .footer-container .socials { 
+    margin-bottom: 1rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+ } 
+ 
+ .footer-container .socials a { 
+    margin: 0 1rem; 
+    color: #61dafb; /* Color inicial de los iconos */
+    text-decoration: none; 
+    font-size: 2rem; /* Tamaño de los iconos */
+    transition: color 0.3s, transform 0.3s, filter 0.3s; /* Transición suave para hover */ 
+ } 
+ 
+ .footer-container .socials a:hover { 
+    color: #21a1f1; /* Color al pasar el mouse */
+    transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
+    filter: drop-shadow(0 0 5px rgba(97, 218, 251, 0.7)); /* Sombra suave al pasar el mouse */
+ } 
+ 
+ footer p { 
+    margin: 0; 
+    font-size: 1rem; 
+ }
