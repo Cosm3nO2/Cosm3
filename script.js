@@ -43,10 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logo.addEventListener('click', toggleNavbar); // Manejar clic en el logo
 
-    // Funciones para el carrusel de videos
+    // Funciones para el carrusel de imágenes
     function updateCarousel() {
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`; // Desplazar el carrusel
+        items.forEach((item, index) => {
+            item.classList.remove('active'); // Remover clase active de todas las imágenes
+        });
+        
+        items[currentIndex].classList.add('active'); // Agregar clase active a la imagen actual
         
         // Actualizar indicadores
         indicators.forEach((indicator, index) => {
@@ -61,4 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Iniciar la transición automática cada 5 segundos
     setInterval(showNextItem, 5000);
+
+    // Agregar evento click a cada imagen del carrusel para cambiar manualmente
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index; // Cambiar al índice de la imagen clickeada
+            updateCarousel(); // Actualizar el carrusel
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.loader'); // Selecciona el div del loader
+
+    // Ocultar el loader después de que la página se haya cargado
+    window.onload = () => {
+        loader.style.display = 'none'; // Oculta el loader
+    };
 });
