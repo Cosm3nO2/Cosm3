@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cosm3no1de Portafolio</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/logo.jpg" alt="Logo de Cosm3no1de" class="logo" id="logo">
+            <h1>C O S M 3 N O 1 D E</h1>
+        </div>
+<nav class="navbar">
+    <ul>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#socials">Redes Sociales</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+        <section id="description">
+            <p>  Viajero del arte digital,
+                un freelancer multitask que danza en melodías virtuales.
+                Como músico , tejo armonías
+                y, en el vasto mundo digital, me sumerjo con destreza.
+                
+</p>
+        </section>
+
+        <!-- Carrusel de Videos -->
+        <section id="video-carousel">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <iframe src="https://youtube.com/shorts/z7NjffvMduw?si=aHRcQc4heaNnxN2A" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://youtube.com/shorts/-Ptt-Zdz0Ro?si=MDt2W2NecuUJ-sEb" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://youtube.com/shorts/o7iKMdwe5mk?si=rxKyFKWw2443Q74C" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- Agrega más videos según sea necesario -->
+                </div>
+        
+                <!-- Indicadores -->
+                <div class="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <!-- Agrega más indicadores según sea necesario -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer> 
+        <div class="footer-container"> 
+            <div class="socials"> 
+                <a href="https://www.facebook.com/people/Cosme-Noide/pfbid02x73rRHAv2UpCYGMSdSFbLyfSSCiyAbWDEFyHDUwqLcwqtQijsGmL631kuYuDbn2Gl/?mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@Cosm3no1de" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i> <!-- Cambiado a TikTok -->
+                </a>
+                <a href="https://www.instagram.com/cosmenoide/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Cosm3No1de" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i> <!-- Cambiado a GitHub -->
+                </a>
+            </div> 
+            <p>Todos los derechos reservados &copy; Cosm3no1de</p> 
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Script para manejar la apertura del navbar -->
+    <script>
+        const logo = document.getElementById('logo');
+        const navbar = document.getElementById('navbar');
+
+        logo.addEventListener('click', () => {
+            if (navbar.style.transform === 'translateX(0)') {
+                navbar.style.transform = 'translateX(-100%)'; // Ocultar el navbar
+            } else {
+                navbar.style.transform = 'translateX(0)'; // Mostrar el navbar
+            }
+        });
+    </script>
+
+</body>
+</html>
