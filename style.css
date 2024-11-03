@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: 'Courier New', Courier, monospace; /* Fuente retro */
@@ -46,9 +44,10 @@ h1 {
 }
 
 header:hover h1 {
-    color: #61dafb; /* Cambia el color del texto al pasar el mouse */
+    color: rgba(97, 218, 251, 0.8); /* Cambia a un color más opaco al pasar el mouse */
     transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el mouse */
 }
+
 /* Navbar */
 .navbar {
     position: fixed; /* Fijo en la pantalla */
