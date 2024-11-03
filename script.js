@@ -44,4 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
     logo.addEventListener('click', toggleNavbar); // Manejar clic en el logo
 
     // Funciones para el carrusel de videos
-   
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`; // Desplazar el carrusel
+        
+        // Actualizar indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function showNextItem() {
+        currentIndex = (currentIndex + 1) % items.length; // Calcular el siguiente índice
+        updateCarousel(); // Actualizar la posición del carrusel
+    }
+
+    // Iniciar la transición automática cada 5 segundos
+    setInterval(showNextItem, 5000);
+});
