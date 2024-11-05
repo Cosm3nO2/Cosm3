@@ -17,109 +17,64 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para efecto de flotación */
 }
 
-/* Header y Footer */
-header, footer {
+/* Estilos generales para Header */
+header {
     display: flex;
-    flex-direction: column; /* Coloca el logo y el título en columna */
-    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra el título */
+    align-items: center; /* Centra verticalmente el título */
     padding: 1rem;
-    background-color: #162447; /* Color oscuro alternativo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #162447; /* Fondo oscuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    position: relative; /* Necesario para posicionar el logo en la esquina */
 }
 
-/* Logo */
-img {
+/* Logo dentro del navbar-toggler (en la esquina superior izquierda) */
+header .navbar-toggler {
+    position: absolute; /* Posiciona el botón en la esquina superior izquierda */
+    top: 1rem;
+    left: 1rem;
+    border: none; /* Sin borde */
+    background: transparent; /* Sin fondo */
+    padding: 0; /* Eliminar padding */
+    cursor: pointer; /* Cambiar cursor a mano */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animaciones */
+}
+
+/* Logo dentro del navbar-toggler */
+header .navbar-toggler img {
+    width: 60px; /* Ajusta el tamaño del logo como botón */
+    height: 60px;
     border-radius: 50%; /* Bordes circulares */
-    width: 50px; /* Ancho fijo */
-    height: 50px; /* Alto fijo */
-    box-shadow: 0 0 10px rgba(233, 69, 96, 0.7); /* Resplandor */
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.7); /* Resplandor suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-    margin-bottom: 0.5rem; /* Espacio debajo del logo */
 }
 
-/* Efecto al pasar el mouse sobre el logo */
-img:hover {
-    transform: scale(1.1); /* Escala al pasar el mouse */
+/* Efecto hover en el logo del navbar (al hacer hover sobre el logo) */
+header .navbar-toggler:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño */
     box-shadow: 0 0 20px rgba(233, 69, 96, 1); /* Resplandor más intenso */
 }
 
-/* Título */
-.h2 {
+/* Título h2class */
+.h2class {
     font-size: 2.5rem;
-    margin: 0; /* Eliminar margen */
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    border: 3px solid #ff6f61; /* Borde contrastante en color pastel */
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border: 3px solid #ff6f61; /* Borde contrastante */
     border-radius: 12px; /* Bordes redondeados */
-    background-color: rgba(255, 182, 193, 0.6); /* Fondo pastel suave */
-    color: #ff6f61; /* Color de texto pastel */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra de texto suave */
-    transform: scale(0.9); /* Comienza ligeramente más pequeño */
-    opacity: 0; /* Invisible al inicio */
-    animation: fadeInScale 0.6s forwards; /* Nueva animación de entrada */
+    background-color: rgba(255, 182, 193, 0.6); /* Fondo suave */
+    color: #ff6f61;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra suave */
+    transform: scale(1); /* Sin efecto de escala inicial */
+    opacity: 1;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Transiciones suaves */
 }
 
-/* Animación de entrada */
-@keyframes fadeInScale {
-    0% {
-        transform: scale(0.9); /* Comienza pequeño */
-        opacity: 0; /* Invisible */
-    }
-    100% {
-        transform: scale(1); /* Escala normal */
-        opacity: 1; /* Visible */
-    }
-}
-
-/* Efecto al pasar el mouse sobre el título */
-.h2:hover {
-    animation: hoverEffect 0.4s forwards; /* Activar la nueva animación de hover */
-}
-
-/* Animación de hover */
-@keyframes hoverEffect {
-    0% {
-        transform: scale(1); /* Mantiene la escala normal */
-        color: #ff6f61; /* Color pastel original */
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra de texto */
-    }
-    50% {
-        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-        color: #ffffff; /* Cambia a blanco */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto más fuerte */
-    }
-    100% {
-        transform: scale(1); /* Vuelve a la escala normal */
-        color: #ff6f61; /* Vuelve a color pastel */
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra de texto suave */
-    }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .h2 {
-        font-size: 2rem; /* Reduce el tamaño del título en pantallas pequeñas */
-        margin: 0.5rem; /* Espaciado reducido */
-        padding: 0.5rem; /* Espaciado interno reducido */
-    }
-
-    img {
-        width: 40px; /* Reduce el tamaño del logo */
-        height: 40px; /* Reduce el tamaño del logo */
-    }
-
-    header {
-        align-items: center; /* Asegura que los elementos estén centrados */
-    }
-}
-
-@media (max-width: 480px) {
-    .h2 {
-        font-size: 1.5rem; /* Reduce aún más el tamaño del título */
-    }
-
-    header {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-    }
+/* Animación de hover para el título */
+.h2class:hover {
+    transform: scale(1.2); /* Aumenta el tamaño */
+    color: #ffffff; /* Cambia a blanco */
+    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.7); /* Efecto de resplandor más fuerte */
 }
 
 /* Navbar */
@@ -127,41 +82,29 @@ img:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
     backdrop-filter: blur(10px); /* Efecto de desenfoque del fondo */
     padding: 0.5rem 1rem;
-    border: none; /* Sin borde para un aspecto más limpio */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para profundidad */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transición suave */
-}
-
-/* Botón de toggle del navbar */
-.navbar-toggler {
     border: none;
-    color: #ffffff;
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
-}
-
-/* Icono del toggle */
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 /* Enlaces del navbar */
 .navbar-nav .nav-link {
     color: #ffffff; /* Texto blanco */
-    font-weight: bold; /* Texto en negrita */
+    font-weight: bold;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
-    border-radius: 8px; /* Bordes redondeados para los enlaces */
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
 }
 
-/* Efecto al pasar el mouse sobre los enlaces */
+/* Efecto hover en los enlaces */
 .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 110, 97, 0.6); /* Fondo suave y colorido al pasar el mouse */
-    color: #ffffff; /* Mantener el texto blanco */
+    background-color: rgba(255, 110, 97, 0.6); /* Fondo suave */
+    color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 110, 97, 0.8); /* Efecto de resplandor */
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    transform: scale(1.05);
 }
 
-/* Collapse Animation */
+/* Collapse Animation para el navbar */
 .collapse {
     display: block;
     max-height: 0;
@@ -175,14 +118,33 @@ img:hover {
 
 /* Responsividad para el navbar */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem; /* Espaciado reducido en pantallas pequeñas */
+    header {
+        flex-direction: column; /* Cambia dirección a columna en pantallas pequeñas */
+        align-items: center;
     }
 
-    .navbar-nav .nav-link {
-        padding: 0.5rem; /* Espaciado interno reducido para enlaces */
+    header .navbar-toggler img {
+        width: 50px; /* Ajusta el tamaño del logo como toggle */
+        height: 50px;
+    }
+
+    .h2class {
+        font-size: 2rem; /* Ajusta el tamaño del título en pantallas pequeñas */
     }
 }
+
+/* Responsividad para dispositivos más pequeños */
+@media (max-width: 480px) {
+    .h2class {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 
 /* Cards */
@@ -231,17 +193,17 @@ footer {
     flex-direction: column; /* Disposición en columna */
     align-items: center; /* Centrar horizontalmente */
     padding: 2rem 0; /* Espaciado superior e inferior */
-    background-color: #0f3460; /* Color oscuro del footer */
+    background-color: #162447; /* Color oscuro del footer */
     color: #ffffff; /* Texto blanco */
     border-top: 3px solid #ff6f61; /* Borde superior vibrante */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Sombra hacia abajo */
-    transition: background-color 0.3s ease; /* Transición de color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición de color y transformaciones */
 }
 
 /* Animación al pasar el mouse sobre el footer */
 footer:hover {
     background-color: #162447; /* Color más claro al pasar el mouse */
-    transform: translateY(-3px); /* Elevar ligeramente el footer */
+    transform: translateY(-5px) scale(1.05); /* Elevar y expandir ligeramente el footer */
 }
 
 /* Texto del footer */
@@ -249,13 +211,13 @@ footer:hover {
     font-size: 1rem; /* Tamaño de fuente */
     margin: 0.5rem 0; /* Margen alrededor del texto */
     text-align: center; /* Centrar el texto */
-    transition: color 0.3s ease; /* Transición de color */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición de color y sombra */
 }
 
 /* Animación del texto al pasar el mouse */
 .footer-text:hover {
     color: #ff6f61; /* Cambiar a color vibrante */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Efecto de resplandor más intenso */
 }
 
 /* Contenedor para los íconos de redes sociales */
@@ -267,28 +229,29 @@ footer:hover {
 
 /* Estilo de los íconos de redes sociales */
 .social-icon {
-    width: 50px; /* Tamaño de los íconos */
-    height: 50px; /* Tamaño de los íconos */
-    margin: 0 0.5rem; /* Espacio entre íconos */
+    width: 60px; /* Tamaño de los íconos más grande */
+    height: 60px; /* Tamaño de los íconos más grande */
+    margin: 0 0.75rem; /* Espacio entre íconos */
     border-radius: 50%; /* Bordes circulares */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más oscuro */
     display: flex; /* Centrar el contenido dentro del icono */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     box-shadow: 0 0 5px rgba(255, 105, 180, 0.5), inset 0 0 10px rgba(255, 105, 180, 0.3); /* Sombra exterior e interior */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transición suave */
 }
 
 /* Efecto al pasar el mouse sobre los íconos */
+.social-icon:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al pasar el mouse */
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8), inset 0 0 20px rgba(255, 105, 180, 0.5); /* Aumentar el efecto de sombra */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo más brillante */
+}
+
+/* Estilo para las imágenes dentro de los íconos */
 .social-icon img {
     width: 70%; /* Ajustar el tamaño de la imagen dentro del contenedor */
     height: auto; /* Mantener la proporción de la imagen */
-}
-
-/* Efecto de escalado al pasar el mouse sobre el icono */
-.social-icon:hover {
-    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
-    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7), inset 0 0 15px rgba(255, 105, 180, 0.4); /* Aumentar el efecto de sombra */
 }
 
 /* Enlaces en el footer */
@@ -296,13 +259,13 @@ footer:hover {
     color: #ffffff; /* Texto blanco */
     text-decoration: none; /* Sin subrayado */
     margin: 0.5rem 0; /* Margen alrededor de los enlaces */
-    transition: color 0.3s ease; /* Transición de color */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición de color y sombra */
 }
 
 /* Efecto al pasar el mouse sobre los enlaces */
 .footer-link:hover {
     color: #ff6f61; /* Cambiar a color vibrante */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
 }
 
 /* Responsividad */
@@ -316,7 +279,7 @@ footer:hover {
     }
 
     .social-icon {
-        width: 40px; /* Tamaño reducido en pantallas pequeñas */
-        height: 40px; /* Tamaño reducido en pantallas pequeñas */
+        width: 50px; /* Tamaño reducido en pantallas pequeñas */
+        height: 50px; /* Tamaño reducido en pantallas pequeñas */
     }
 }
