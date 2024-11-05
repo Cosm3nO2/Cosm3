@@ -1,8 +1,8 @@
 /* Tipografía y Colores Generales */
 body {
-    font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    background-color: #1a1a2e; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1a1a2e;
+    color: #ffffff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -10,183 +10,118 @@ body {
 
 /* Contenedor de contenido */
 .main-content {
-    position: relative;
-    padding: 2rem; /* Espacio alrededor del contenido */
-    background-color: rgba(25, 25, 40, 0.8); /* Fondo semi-transparente para el contenido */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para efecto de flotación */
+    max-width: 100%;
+    padding: 1.5rem;
+    background-color: rgba(25, 25, 40, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos generales para Header */
+/* Header */
 header {
     display: flex;
-    justify-content: center; /* Centra el título */
-    align-items: center; /* Centra verticalmente el título */
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-    background-color: #162447; /* Fondo oscuro */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-    position: relative; /* Necesario para posicionar el logo en la esquina */
+    background-color: #162447;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-/* Logo dentro del navbar-toggler (en la esquina superior izquierda) */
+/* Logo */
 header .navbar-toggler {
-    position: absolute; /* Posiciona el botón en la esquina superior izquierda */
+    position: absolute;
     top: 1rem;
     left: 1rem;
-    border: none; /* Sin borde */
-    background: transparent; /* Sin fondo */
-    padding: 0; /* Eliminar padding */
-    cursor: pointer; /* Cambiar cursor a mano */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animaciones */
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Logo dentro del navbar-toggler */
 header .navbar-toggler img {
-    width: 60px; /* Ajusta el tamaño del logo como botón */
-    height: 60px;
-    border-radius: 50%; /* Bordes circulares */
-    box-shadow: 0 0 10px rgba(233, 69, 96, 0.7); /* Resplandor suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.7);
 }
-
-/* Efecto hover en el logo del navbar (al hacer hover sobre el logo) */
-header .navbar-toggler:hover img {
-    transform: scale(1.1); /* Aumenta el tamaño */
-    box-shadow: 0 0 20px rgba(233, 69, 96, 1); /* Resplandor más intenso */
-}
-
 /* Título h2class */
 .h2class {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 2rem;
+    margin: 0.5rem 0;
     padding: 0.5rem 1rem;
-    border: 3px solid #ff6f61; /* Borde contrastante */
-    border-radius: 12px; /* Bordes redondeados */
-    background-color: rgba(255, 182, 193, 0.6); /* Fondo suave */
+    border: 3px solid #ff6f61;
+    border-radius: 12px;
+    background-color: rgba(255, 182, 193, 0.6);
     color: #ff6f61;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra suave */
-    transform: scale(1); /* Sin efecto de escala inicial */
-    opacity: 1;
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Transiciones suaves */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Animación de hover para el título */
 .h2class:hover {
-    transform: scale(1.2); /* Aumenta el tamaño */
-    color: #ffffff; /* Cambia a blanco */
-    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.7); /* Efecto de resplandor más fuerte */
+    transform: scale(1.0);
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.7);
 }
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+    .h2class {
+        font-size: 1.4rem; /* Tamaño de fuente reducido */
+        padding: 0.4rem 0.8rem; /* Reducción de padding */
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .h2class {
+        font-size: 1.2rem; /* Tamaño de fuente aún más reducido */
+        padding: 0.3rem 0.6rem; /* Padding más reducido */
+    }
+}
+
 
 /* Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque del fondo */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     padding: 0.5rem 1rem;
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* Enlaces del navbar */
 .navbar-nav .nav-link {
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff;
     font-weight: bold;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
     border-radius: 8px;
 }
 
-/* Efecto hover en los enlaces */
 .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 110, 97, 0.6); /* Fondo suave */
+    background-color: rgba(255, 110, 97, 0.6);
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 110, 97, 0.8); /* Efecto de resplandor */
+    text-shadow: 0 0 10px rgba(255, 110, 97, 0.8);
     transform: scale(1.05);
 }
 
-/* Collapse Animation para el navbar */
-.collapse {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
-}
-
-.collapse.show {
-    max-height: 100%;
-}
-
-/* Responsividad para el navbar */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Cambia dirección a columna en pantallas pequeñas */
-        align-items: center;
-    }
-
-    header .navbar-toggler img {
-        width: 50px; /* Ajusta el tamaño del logo como toggle */
-        height: 50px;
-    }
-
-    .h2class {
-        font-size: 2rem; /* Ajusta el tamaño del título en pantallas pequeñas */
-    }
-}
-
-/* Responsividad para dispositivos más pequeños */
-@media (max-width: 480px) {
-    .h2class {
-        font-size: 1.8rem; /* Reduce el tamaño del título */
-    }
-
-    header img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-
-
 /* Cards */
 .card {
-    background-color: #162447; /* Fondo de tarjeta oscuro */
-    border: 2px solid #ff6f61; /* Bordes vibrantes */
+    background-color: #162447;
+    border: 2px solid #ff6f61;
     border-radius: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    padding: 0; /* Sin relleno para maximizar el espacio de imagen */
-    width: 200px; /* Ancho reducido de la tarjeta */
+    width: 100%;
+    max-width: 300px;
 }
 
-/* Estilo de la imagen */
 .card-img-top {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 120px; /* Altura reducida para la imagen */
-    object-fit: cover; /* Cubre el contenedor sin distorsión */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* Efecto al pasar el mouse sobre la imagen */
-.card-img-top:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para un efecto de profundidad */
-}
-
-/* Título */
-.card-title {
-    font-size: 1.2rem; /* Tamaño de fuente del título reducido */
-    color: #ffffff; /* Color del texto del título */
-    margin: 0.5rem 0; /* Espaciado alrededor del título */
-}
-
-/* Descripción */
-.card-text {
-    color: #b0b0b0; /* Color del texto de la descripción */
-    text-align: center; /* Centra el texto */
-    padding: 0 0.5rem; /* Espaciado horizontal reducido */
-}
-
-/* Footer */
 /* Footer */
 footer {
     display: flex; /* Usar flexbox para la disposición */
