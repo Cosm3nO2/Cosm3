@@ -1,0 +1,230 @@
+/* Tipografía y Colores Generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+    background-color: #0d0d20; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto gris claro */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de contenido */
+.main-content {
+    max-width: 100%;
+    padding: 1.5rem;
+    background-color: rgba(25, 25, 40, 0.9); /* Fondo semi-translúcido */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para el logo y navbar */
+    align-items: center; /* Centrar horizontalmente */
+    padding: 1rem;
+    background-color: #162447; /* Color del header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+#logo {
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Título Principal */
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Tamaño responsivo con clamp */
+    color: #bbd624; /* Color vibrante para el título */
+    text-shadow: 2px 2px 5px rgba(29, 21, 21, 0.7); /* Sombra para el título */
+}
+
+/* Estilos generales del nav */
+nav {
+    background-color: #333; /* Color de fondo del navbar */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block; /* Para mostrar los elementos en línea */
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white; /* Color del texto */
+    text-decoration: none;
+}
+
+/* Estilo para el menú desplegable */
+nav .dropdown {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    background-color: #444; /* Color de fondo del dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Mostrar el dropdown al pasar el mouse sobre 'Contacto' */
+nav ul li:hover .dropdown {
+    display: block; /* Muestra el dropdown */
+    opacity: 1; /* Hace visible el dropdown */
+}
+
+/* Estilos para los elementos del dropdown */
+.dropdown li {
+    padding: 10px 15px; /* Espaciado interno */
+}
+
+.dropdown li a {
+    color: white; /* Color del texto en el dropdown */
+}
+
+/* Efecto hover en los enlaces del dropdown */
+.dropdown li a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los íconos */
+.dropdown li a i {
+    margin-right: 8px; /* Espacio entre ícono y texto */
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(25, 25, 40, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos de Sección */
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Tamaño responsivo con clamp */
+    color: #bbd624; /* Color vibrante para los títulos de sección */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Lista de Servicios */
+ul {
+    list-style-type: none; /* Quitar viñetas */
+}
+
+li {
+    margin-bottom: 20px; /* Espaciado entre servicios */
+}
+
+/* Imágenes de Servicios */
+.servicio-imagen {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    max-width: 300px; /* Limita el ancho máximo */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+
+/* Footer */
+footer {
+    display: flex; /* Usar flexbox para la disposición */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Centrar horizontalmente */
+    padding: 2rem 0; /* Espaciado superior e inferior */
+    background-color: #162447; /* Color oscuro del footer */
+    color: #ffffff; /* Texto blanco */
+    border-top: 3px solid #ff6f61; /* Borde superior vibrante */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Sombra hacia abajo */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición de color y transformaciones */
+}
+
+/* Animación al pasar el mouse sobre el footer */
+footer:hover {
+    background-color: #162447; /* Color más claro al pasar el mouse */
+    transform: translateY(-5px) scale(1.05); /* Elevar y expandir ligeramente el footer */
+}
+
+/* Texto del footer */
+.footer-text {
+    font-size: 1rem; /* Tamaño de fuente */
+    margin: 0.5rem 0; /* Margen alrededor del texto */
+    text-align: center; /* Centrar el texto */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición de color y sombra */
+}
+
+/* Animación del texto al pasar el mouse */
+.footer-text:hover {
+    color: #ff6f61; /* Cambiar a color vibrante */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Efecto de resplandor más intenso */
+}
+
+/* Contenedor para los íconos de redes sociales */
+.social-icons {
+    display: flex; /* Disposición en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 1rem; /* Espacio encima de los íconos */
+}
+
+/* Estilo de los íconos de redes sociales */
+.social-icon {
+    width: 60px; /* Tamaño de los íconos más grande */
+    height: 60px; /* Tamaño de los íconos más grande */
+    margin: 0 0.75rem; /* Espacio entre íconos */
+    border-radius: 50%; /* Bordes circulares */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más oscuro */
+    display: flex; /* Centrar el contenido dentro del icono */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5), inset 0 0 10px rgba(255, 105, 180, 0.3); /* Sombra exterior e interior */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre los íconos */
+.social-icon:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al pasar el mouse */
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8), inset 0 0 20px rgba(255, 105, 180, 0.5); /* Aumentar el efecto de sombra */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo más brillante */
+}
+
+/* Estilo para las imágenes dentro de los íconos */
+.social-icon img {
+    width: 70%; /* Ajustar el tamaño de la imagen dentro del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Enlaces en el footer */
+.footer-link {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0.5rem 0; /* Margen alrededor de los enlaces */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición de color y sombra */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.footer-link:hover {
+    color: #ff6f61; /* Cambiar a color vibrante */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    footer {
+        padding: 1rem 0; /* Espaciado reducido en pantallas pequeñas */
+    }
+
+    .footer-text {
+        font-size: 0.9rem; /* Tamaño de fuente reducido */
+    }
+
+    .social-icon {
+        width: 50px; /* Tamaño reducido en pantallas pequeñas */
+        height: 50px; /* Tamaño reducido en pantallas pequeñas */
+    }
+}
