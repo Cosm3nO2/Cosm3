@@ -1,7 +1,7 @@
 /* Tipografía y Colores Generales */
 body {
     font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
-    background-color: #0d0d20; /* Fondo oscuro */
+    background-color: #404094; /* Fondo oscuro */
     color: #e0e0e0; /* Texto gris claro */
     line-height: 1.6;
     margin: 0;
@@ -12,7 +12,7 @@ body {
 .main-content {
     max-width: 100%;
     padding: 1.5rem;
-    background-color: rgba(25, 25, 40, 0.9); /* Fondo semi-translúcido */
+    background-color: rgba(64, 64, 124, 0.9); /* Fondo semi-translúcido */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -23,8 +23,8 @@ header {
     flex-direction: column; /* Cambia a columna para el logo y navbar */
     align-items: center; /* Centrar horizontalmente */
     padding: 1rem;
-    background-color: #162447; /* Color del header */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #5f7099; /* Color del header */
+    box-shadow: 0 4px 10px rgba(102, 78, 78, 0.3);
 }
 
 /* Logo */
@@ -36,33 +36,67 @@ header {
 /* Título Principal */
 h1 {
     font-size: clamp(2rem, 5vw, 3rem); /* Tamaño responsivo con clamp */
-    color: #ff6f61; /* Color vibrante para el título */
+    color: #e6a7a1; /* Color vibrante para el título */
     text-shadow: 2px 2px 5px rgba(255, 110, 97, 0.7); /* Sombra para el título */
 }
 
-/* Navegación */
+/* Estilos generales del nav */
 nav {
-    margin-top: 10px; /* Espacio entre el título y la navegación */
+    background-color: #504646; /* Color de fondo del navbar */
 }
 
 nav ul {
-    list-style-type: none; /* Quitar viñetas */
-    display: flex; /* Disposición en fila para los enlaces de navegación */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin-right: 20px; /* Espacio entre los enlaces de navegación */
+    position: relative;
+    display: inline-block; /* Para mostrar los elementos en línea */
 }
 
-nav ul li a {
-    text-decoration: none; /* Sin subrayado */
-    color: #e0e0e0; /* Color del texto del enlace */
-    font-weight: bold; /* Negrita para los enlaces */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave para efectos de hover */
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white; /* Color del texto */
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #ff6f61; /* Cambiar a color vibrante al pasar el mouse sobre los enlaces */
+/* Estilo para el menú desplegable */
+nav .dropdown {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    background-color: #444; /* Color de fondo del dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Mostrar el dropdown al pasar el mouse sobre 'Contacto' */
+nav ul li:hover .dropdown {
+    display: block; /* Muestra el dropdown */
+    opacity: 1; /* Hace visible el dropdown */
+}
+
+/* Estilos para los elementos del dropdown */
+.dropdown li {
+    padding: 10px 15px; /* Espaciado interno */
+}
+
+.dropdown li a {
+    color: white; /* Color del texto en el dropdown */
+}
+
+/* Efecto hover en los enlaces del dropdown */
+.dropdown li a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los íconos */
+.dropdown li a i {
+    margin-right: 8px; /* Espacio entre ícono y texto */
 }
 
 /* Secciones */
